@@ -5,7 +5,7 @@ namespace Legeng
     class Program
     {
 
-        public static int selection; 
+        public static int selection;
 
         static void Main(string[] args)
         {
@@ -16,7 +16,7 @@ namespace Legeng
                 "\nPlease go ahead and decide on a Guild.\n");
 
 
-         Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
+            Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
                               "To Join the Sword Guild, Enter option '2'.\n" +
                               "To Join the Elixir Guild, Enter option '3'.\n");
 
@@ -33,10 +33,32 @@ namespace Legeng
                     ElixirGuild();
                     break;
                 default:
-                { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
+                    { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
                     break;
             }
-         }
+        }        
+
+        private static string ShieldGuild()
+        {
+
+            return "";
+        }
+
+        private static string SwordGuild()
+        {
+
+            return "";
+        }
+
+        private static string ElixirGuild()
+        {
+
+            return "";
+        }
+
+
+    }
+}
 
 
 using System;
