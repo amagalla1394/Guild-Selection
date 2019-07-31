@@ -1,0 +1,69 @@
+using System;
+
+namespace Legeng
+{
+    class Program
+    {
+
+        public static int selection; 
+
+        static void Main(string[] args)
+        {
+            Console.WriteLine("\nWelcome to Elroz, Land of Monsters and Quest!\n" +
+                "\nBefore continuing, we must understand your role young hero." +
+                "\nCurrently in our World, there exist Three Guilds; 'The Shield', 'The Sword', and 'The Elixir'." +
+                "\nUnderstand that each Guild breaks down their classes into sub-categories." +
+                "\nPlease go ahead and decide on a Guild.\n");
+
+
+            while (selection == 0)
+            {
+                Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
+                "To Join the Sword Guild, Enter option '2'.\n" +
+                "To Join the Elixir Guild, Enter option '3'.\n");
+            
+                int selection = int.Parse(Console.ReadLine());
+                if (selection == 1)
+                {
+                    ShieldGuild();
+                    break;
+                }
+                else if (selection == 2)
+                {
+                    SwordGuild();
+                    continue;
+                }
+                else if (selection == 3)
+                {
+                    ElixirGuild();
+                    continue;
+                }
+                else
+                { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
+            }
+
+        }
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Legeng
+{
+    class lootClass
+    {
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Legeng
+{
+    class monsterClass
+    {
+    }
+}
