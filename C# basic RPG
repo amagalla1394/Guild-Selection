@@ -16,33 +16,27 @@ namespace Legeng
                 "\nPlease go ahead and decide on a Guild.\n");
 
 
-            while (selection == 0)
+         Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
+                              "To Join the Sword Guild, Enter option '2'.\n" +
+                              "To Join the Elixir Guild, Enter option '3'.\n");
+
+            int selection = int.Parse(Console.ReadLine());
+            switch (selection)
             {
-                Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
-                "To Join the Sword Guild, Enter option '2'.\n" +
-                "To Join the Elixir Guild, Enter option '3'.\n");
-            
-                int selection = int.Parse(Console.ReadLine());
-                if (selection == 1)
-                {
+                case 1:
                     ShieldGuild();
                     break;
-                }
-                else if (selection == 2)
-                {
+                case 2:
                     SwordGuild();
-                    continue;
-                }
-                else if (selection == 3)
-                {
+                    break;
+                case 3:
                     ElixirGuild();
-                    continue;
-                }
-                else
+                    break;
+                default:
                 { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
+                    break;
             }
-
-        }
+         }
 
 
 using System;
