@@ -4,40 +4,47 @@ namespace Legeng
 {
     class Program
     {
-
-        public static int selection;
+        public static int Selection { get; private set; }
 
         static void Main(string[] args)
         {
+
             Console.WriteLine("\nWelcome to Elroz, Land of Monsters and Quest!\n" +
                 "\nBefore continuing, we must understand your role young hero." +
                 "\nCurrently in our World, there exist Three Guilds; 'The Shield', 'The Sword', and 'The Elixir'." +
                 "\nUnderstand that each Guild breaks down their classes into sub-categories." +
                 "\nPlease go ahead and decide on a Guild.\n");
 
-
-            Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
-                              "To Join the Sword Guild, Enter option '2'.\n" +
-                              "To Join the Elixir Guild, Enter option '3'.\n");
-
-            int selection = int.Parse(Console.ReadLine());
-            switch (selection)
+            do
             {
-                case 1:
-                    ShieldGuild();
-                    break;
-                case 2:
-                    SwordGuild();
-                    break;
-                case 3:
-                    ElixirGuild();
-                    break;
-                default:
-                    { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
-                    break;
-            }
-        }        
+                Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
+                                  "To Join the Sword Guild, Enter option '2'.\n" +
+                                  "To Join the Elixir Guild, Enter option '3'.\n");
 
+                int selection = int.Parse(Console.ReadLine());
+
+                switch (selection)
+                {
+                    case 1:
+                        ShieldGuild();
+                        break;
+                    case 2:
+                        SwordGuild();
+                        break;
+                    case 3:
+                        ElixirGuild();
+                        break;
+
+                    default:
+
+                        { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
+
+                        break;
+                }
+            }while (Selection > 0 || Selection < 4) ;
+        }
+                         
+                     
         private static string ShieldGuild()
         {
 
@@ -55,8 +62,7 @@ namespace Legeng
 
             return "";
         }
-
-
+        
     }
 }
 
