@@ -44,19 +44,19 @@ namespace Legeng
                                                   
         private static string ShieldGuild()
         {
-            Console.WriteLine("Hello");
+            Console.WriteLine("");
             return "";
         }
 
         private static string SwordGuild()
         {
-            Console.WriteLine("Hole");
+            Console.WriteLine("");
             return "";
         }
 
         private static string ElixirGuild()
         {
-            Console.WriteLine("Hollll");
+            Console.WriteLine("");
             return "";
         }
         
