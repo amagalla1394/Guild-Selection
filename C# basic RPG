@@ -14,52 +14,54 @@ namespace Legeng
                 "\nUnderstand that each Guild breaks down their classes into sub-categories." +
                 "\nPlease go ahead and decide on a Guild.\n");
 
-            
-            
-            Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
-                              "To Join the Sword Guild, Enter option '2'.\n" +
-                              "To Join the Elixir Guild, Enter option '3'.\n");
-            int Selection = int.Parse(Console.ReadLine());
-            
+            do
+            {
+                Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
+                                  "To Join the Sword Guild, Enter option '2'.\n" +
+                                  "To Join the Elixir Guild, Enter option '3'.\n");
+                int Selection = int.Parse(Console.ReadLine());
                 if (Selection == 1)
                 {
                     ShieldGuild();
-                    
-                } else if (Selection == 2)
+                    break;
+                }
+                else if (Selection == 2)
                 {
                     SwordGuild();
-                    
-                } else if (Selection == 3)
+                    break;
+                }
+                else if (Selection == 3)
                 {
                     ElixirGuild();
-                    
+                    break;
                 }
-                else { Console.WriteLine("\nThe Guild selection you have chosen is invalid, please choose an existing Guild to join.\n"); }
-         
+            }
+            while (Selection != 1 || Selection != 2 || Selection != 3);            
+            { }
+
         }
-                       
-                     
+             
+                                                  
         private static string ShieldGuild()
         {
-
+            Console.WriteLine("Hello");
             return "";
         }
 
         private static string SwordGuild()
         {
-
+            Console.WriteLine("Hole");
             return "";
         }
 
         private static string ElixirGuild()
         {
-
+            Console.WriteLine("Hollll");
             return "";
         }
         
     }
 }
-
 
 using System;
 using System.Collections.Generic;
