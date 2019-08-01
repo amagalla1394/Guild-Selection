@@ -4,6 +4,7 @@ namespace Legeng
 {
     class Program
     {
+        //use of global parameter for character selection
         public static int Selection { get; private set; }
 
         static void Main(string[] args)
@@ -14,6 +15,8 @@ namespace Legeng
                 "\nUnderstand that each Guild breaks down their classes into sub-categories." +
                 "\nPlease go ahead and decide on a Guild.\n");
 
+            //Do-While loop to verify selection.
+            //Selection to call different class with story configuration
             do
             {
                 Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
@@ -22,44 +25,71 @@ namespace Legeng
                 int Selection = int.Parse(Console.ReadLine());
                 if (Selection == 1)
                 {
-                    ShieldGuild();
+                    ShieldStory.ShieldGuild();
                     break;
                 }
                 else if (Selection == 2)
                 {
-                    SwordGuild();
+                    SwordStory.SwordGuild();
                     break;
                 }
                 else if (Selection == 3)
                 {
-                    ElixirGuild();
+                    ElixirStory.ElixirGuild();
                     break;
                 }
             }
             while (Selection != 1 || Selection != 2 || Selection != 3);            
             { }
+        }        
+    }
+}
 
-        }
-             
-                                                  
-        private static string ShieldGuild()
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Legeng
+{
+    class ShieldStory
+    {
+        public static string ShieldGuild()
         {
             Console.WriteLine("");
             return "";
         }
+    }
+}
 
-        private static string SwordGuild()
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Legeng
+{
+    class SwordStory
+    {
+        public static string SwordGuild()
         {
             Console.WriteLine("");
             return "";
         }
+    }
+}
 
-        private static string ElixirGuild()
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Legeng
+{
+    class ElixirStory
+    {
+        public static string ElixirGuild()
         {
             Console.WriteLine("");
             return "";
         }
-        
     }
 }
 
@@ -73,7 +103,6 @@ namespace Legeng
     {
     }
 }
-
 
 using System;
 using System.Collections.Generic;
