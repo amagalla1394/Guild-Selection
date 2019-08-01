@@ -4,19 +4,38 @@ namespace Legeng
 {
     class Program
     {
-        //use of global parameter for character selection
+        //use of global variables for character selection
         public static int Selection { get; private set; }
+        public static string PlayerName { get; private set; }
+        public static int age { get; private set; } 
+        
 
         static void Main(string[] args)
         {
+            //Color Settings
+            Console.BackgroundColor = ConsoleColor.White;
+            Console.Clear();
+            Console.ForegroundColor = ConsoleColor.Black;
+
+            //introduction and character information saved as global variables
             Console.WriteLine("\nWelcome to Elroz, Land of Monsters and Quest!\n" +
                 "\nBefore continuing, we must understand your role young hero." +
                 "\nCurrently in our World, there exist Three Guilds; 'The Shield', 'The Sword', and 'The Elixir'." +
-                "\nUnderstand that each Guild breaks down their classes into sub-categories." +
-                "\nPlease go ahead and decide on a Guild.\n");
+                "\nUnderstand that each Guild breaks down their classes into sub-categories.\n");
+            Console.WriteLine("-----------------------------------------------------------------------------");
+
+
+            Console.WriteLine("Let us begin with some basic necessities. Please tell us your name: ");
+            string PlayerName = Console.ReadLine();
+            Console.WriteLine("-----------------------------------------------------------------------------");
+            Console.WriteLine("Alright " + PlayerName + ", How old are you? ");
+            int age = int.Parse(Console.ReadLine());
+            Console.WriteLine("-----------------------------------------------------------------------------");
+
 
             //Do-While loop to verify selection.
             //Selection to call different class with story configuration
+            Console.WriteLine("\nPlease select a Guild to join: \n");
             do
             {
                 Console.WriteLine("To Join the Shield Guild, Enter option '1'.\n" +
@@ -41,7 +60,9 @@ namespace Legeng
             }
             while (Selection != 1 || Selection != 2 || Selection != 3);            
             { }
-        }        
+            Console.WriteLine("-----------------------------------------------------------------------------");
+
+        }
     }
 }
 
@@ -53,8 +74,11 @@ namespace Legeng
 {
     class ShieldStory
     {
+
         public static string ShieldGuild()
         {
+            //Console.Clear();
+
             Console.WriteLine("");
             return "";
         }
