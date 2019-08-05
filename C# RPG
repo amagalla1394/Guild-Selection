@@ -7,8 +7,8 @@ namespace Legeng
         //use of global variables for character selection
         public static int Selection { get; private set; }
         public static string PlayerName { get; private set; }
-        public static int age { get; private set; } 
-        
+        public static int Age { get; private set; }                    
+        public static string CharacterData = "";
 
         static void Main(string[] args)
         {
@@ -17,21 +17,28 @@ namespace Legeng
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Black;
 
-            //introduction and character information saved as global variables
+            //introduction 
             Console.WriteLine("\nWelcome to Elroz, Land of Monsters and Quest!\n" +
                 "\nBefore continuing, we must understand your role young hero." +
                 "\nCurrently in our World, there exist Three Guilds; 'The Shield', 'The Sword', and 'The Elixir'." +
                 "\nUnderstand that each Guild breaks down their classes into sub-categories.\n");
             Console.WriteLine("-----------------------------------------------------------------------------");
 
+            //character information with while loop to verify player preference
+            while (CharacterData != "Yes" && CharacterData != "yes") {
+                Console.WriteLine("\nLet's make sure all information is correct. Please tell us your name: ");
+                string PlayerName = Console.ReadLine();
+                Console.WriteLine("-----------------------------------------------------------------------------");
+                Console.WriteLine("Alright " + PlayerName + ", How old are you? ");
+                int age = int.Parse(Console.ReadLine());
+                Console.WriteLine("-----------------------------------------------------------------------------");
 
-            Console.WriteLine("Let us begin with some basic necessities. Please tell us your name: ");
-            string PlayerName = Console.ReadLine();
-            Console.WriteLine("-----------------------------------------------------------------------------");
-            Console.WriteLine("Alright " + PlayerName + ", How old are you? ");
-            int age = int.Parse(Console.ReadLine());
-            Console.WriteLine("-----------------------------------------------------------------------------");
+                Console.WriteLine("\nBefore we continue, you have chosen '" + PlayerName + "' as your adventurer name " +
+                    "you have stated to be " + age + " years old.");
 
+                Console.WriteLine("Is your information correct:  Yes or No");
+                CharacterData = Console.ReadLine();                
+            }
 
             //Do-While loop to verify selection.
             //Selection to call different class with story configuration
@@ -58,7 +65,7 @@ namespace Legeng
                     break;
                 }
             }
-            while (Selection != 1 || Selection != 2 || Selection != 3);            
+            while (Selection != 1 && Selection != 2 && Selection != 3);            
             { }
             Console.WriteLine("-----------------------------------------------------------------------------");
 
